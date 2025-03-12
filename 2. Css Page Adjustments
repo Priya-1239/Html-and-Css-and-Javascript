@@ -1,0 +1,404 @@
+# 1. A page which specify a black border for table and if hover on it, page should change it's colour.\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            transition: background-color 0.3s ease;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 50px auto;
+            border: 2px solid black;
+            background-color: white;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        table:hover {
+            background-color: lightcoral;
+        }
+        table:hover ~ body {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Col 1</td>
+            <td>Row 1, Col 2</td>
+            <td>Row 1, Col 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Col 1</td>
+            <td>Row 2, Col 2</td>
+            <td>Row 2, Col 3</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+# 2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use different types of display for an element (display: none, inline, block, contents, list-item)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Hover Effect</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            transition: background-color 0.3s ease;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 50px auto;
+            border: 2px solid black;
+            background-color: white;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        table:hover {
+            background-color: lightgray;
+        }
+        table:hover ~ body {
+            background-color: lightblue;
+        }
+        
+        /* Visibility Examples */
+        .hidden-element {
+            visibility: hidden;
+        }
+        .visible-element {
+            visibility: visible;
+        }
+        .collapsed-element {
+            visibility: collapse;
+        }
+        
+        /* Display Examples */
+        .none-element {
+            display: none;
+        }
+        .inline-element {
+            display: inline;
+            background-color: orange;
+            padding: 5px;
+        }
+        .block-element {
+            display: block;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .contents-element {
+            display: contents;
+        }
+        .list-item-element {
+            display: list-item;
+            list-style-type: square;
+            margin-left: 20px;
+            background-color: lightgoldenrodyellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Col 1</td>
+            <td class="hidden-element">Row 1, Col 2 (Hidden)</td>
+            <td class="visible-element">Row 1, Col 3 (Visible)</td>
+        </tr>
+        <tr class="collapsed-element">
+            <td>Row 2, Col 1 (Collapsed)</td>
+            <td>Row 2, Col 2</td>
+            <td>Row 2, Col 3</td>
+        </tr>
+    </table>
+    
+    <p class="none-element">This paragraph is hidden (display: none).</p>
+    <span class="inline-element">This is an inline element.</span>
+    <div class="block-element">This is a block element.</div>
+    <div class="contents-element">
+        <p>This paragraph is within a contents element.</p>
+    </div>
+    <div class="list-item-element">This is a list item.</div>
+</body>
+</html>
+
+# 3. A long page which should have two links "click to go to bottom of page" and "click to go to top of page" . Also set their scroll-behavior to scroll smoothly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jala Technologies - Table Hover Effect</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: lightsteelblue;
+            transition: background-color 0.3s ease;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 50px auto;
+            border: 2px solid black;
+            background-color: white;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        table:hover {
+            background-color: lightyellow;
+        }
+        table:hover ~ body {
+            background-color: lightsalmon;
+        }
+        
+        /* Visibility Examples */
+        .hidden-element {
+            visibility: hidden;
+        }
+        .visible-element {
+            visibility: visible;
+        }
+        .collapsed-element {
+            visibility: collapse;
+        }
+        
+        /* Display Examples */
+        .none-element {
+            display: none;
+        }
+        .inline-element {
+            display: inline;
+            background-color: pink;
+            padding: 5px;
+        }
+        .block-element {
+            display: block;
+            background-color: palegreen;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .contents-element {
+            display: contents;
+        }
+        .list-item-element {
+            display: list-item;
+            list-style-type: square;
+            margin-left: 20px;
+            background-color: lightblue;
+            padding: 5px;
+        }
+        .spacer {
+            height: 1500px; /* Creates a long page */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Jala Technologies</h1>
+    <p>Jala Technologies is a leading software solutions provider, delivering innovative and scalable technology solutions. Our expertise spans across web development, AI, data analytics, and enterprise solutions.</p>
+    <a href="#bottom">Click to go to bottom of page</a>
+    <div class="spacer"></div>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Col 1</td>
+            <td class="hidden-element">Row 1, Col 2 (Hidden)</td>
+            <td class="visible-element">Row 1, Col 3 (Visible)</td>
+        </tr>
+        <tr class="collapsed-element">
+            <td>Row 2, Col 1 (Collapsed)</td>
+            <td>Row 2, Col 2</td>
+            <td>Row 2, Col 3</td>
+        </tr>
+    </table>
+    
+    <p class="none-element">This paragraph is hidden (display: none).</p>
+    <span class="inline-element">This is an inline element.</span>
+    <div class="block-element">This is a block element.</div>
+    <div class="contents-element">
+        <p>This paragraph is within a contents element.</p>
+    </div>
+    <div class="list-item-element">This is a list item.</div>
+    
+    <div id="bottom"></div>
+    <a href="#top">Click to go to top of page</a>
+</body>
+</html>
+
+# 4. Add padding and margin with different size and understand the difference between them.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding vs Margin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .padding-box {
+            background-color: lightblue;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        .margin-box {
+            background-color: lightcoral;
+            margin: 50px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Understanding Padding vs Margin</h2>
+    <div class="padding-box">This box has **40px padding** inside.</div>
+    <div class="margin-box">This box has **50px margin** outside and 20px padding inside.</div>
+</body>
+</html>
+
+# 5. A page with multiple background images for an webpage or element and define their adjustable sizes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jala Technologies - Innovation in IT</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: lightsteelblue;
+            transition: background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 50px auto;
+            border: 2px solid black;
+            background-color: white;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        table:hover {
+            background-color: lightyellow;
+        }
+        table:hover ~ body {
+            background-color: lightsalmon;
+        }
+        
+        .spacer {
+            height: 1500px; /* Creates a long page */
+        }
+        
+        /* Padding and Margin Examples */
+        .padding-example {
+            background-color: lightcoral;
+            padding: 30px;
+            border: 2px solid black;
+        }
+        .margin-example {
+            background-color: lightgreen;
+            margin: 40px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .both-example {
+            background-color: lightgray;
+            margin: 25px;
+            padding: 15px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Jala Technologies</h1>
+    <p>Jala Technologies is a premier IT solutions provider, specializing in software development, artificial intelligence, cloud computing, and enterprise solutions. We are committed to delivering cutting-edge technology to empower businesses worldwide.</p>
+    
+    <h2>Our Services</h2>
+    <ul>
+        <li>Software Development</li>
+        <li>Artificial Intelligence & Machine Learning</li>
+        <li>Data Analytics & Business Intelligence</li>
+        <li>Cloud Computing Solutions</li>
+        <li>Cybersecurity</li>
+    </ul>
+    
+    <a href="#bottom">Click to go to bottom of page</a>
+    <div class="spacer"></div>
+    
+    <h2>Company Performance</h2>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Revenue (in million $)</th>
+            <th>Employees</th>
+        </tr>
+        <tr>
+            <td>2020</td>
+            <td>50</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>2021</td>
+            <td>75</td>
+            <td>350</td>
+        </tr>
+        <tr>
+            <td>2022</td>
+            <td>100</td>
+            <td>500</td>
+        </tr>
+    </table>
+    
+    <div class="padding-example">This div has extra padding of 30px.</div>
+    <div class="margin-example">This div has a margin of 40px and padding of 20px.</div>
+    <div class="both-example">This div has both margin and padding adjusted for spacing.</div>
+    
+    <div id="bottom"></div>
+    <a href="#top">Click to go to top of page</a>
+</body>
+</html>
