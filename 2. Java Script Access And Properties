@@ -1,0 +1,390 @@
+# 1. Write program using this keyword when we click on button, it should be disappear.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappear Button using "this" Keyword</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click the Button to Make It Disappear</h1>
+    <button class="btn" onclick="hideButton(this)">Click Me</button>
+    <button class="btn" onclick="hideButton(this)">Another Button</button>
+
+    <script>
+        function hideButton(button) {
+            button.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
+# 2. Invoke a function using call() and apply(). Also Spot the difference between them.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call() vs apply() in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .call-btn {
+            background-color: #3498db;
+            color: white;
+        }
+        .apply-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding call() and apply() in JavaScript</h1>
+    <div class="container">
+        <p>Click the buttons below to invoke the function using <b>call()</b> or <b>apply()</b> and see the difference.</p>
+        
+        <button class="btn call-btn" onclick="useCall()">Use call()</button>
+        <button class="btn apply-btn" onclick="useApply()">Use apply()</button>
+        
+        <p class="result" id="output"></p>
+    </div>
+
+    <script>
+        let person = {
+            fullName: function (city, country) {
+                return this.name + " lives in " + city + ", " + country;
+            }
+        };
+
+        let person1 = { name: "Priya" };
+
+        function useCall() {
+            let result = person.fullName.call(person1, "Hyderabad", "India");
+            document.getElementById("output").innerText = "call(): " + result;
+        }
+
+        function useApply() {
+            let result = person.fullName.apply(person1, ["Hyderabad", "India"]);
+            document.getElementById("output").innerText = "apply(): " + result;
+        }
+
+        // Using apply() to find max number from an array
+        let numbers = [3, 7, 2, 9, 5];
+        let maxNumber = Math.max.apply(null, numbers);
+        console.log("Max number using apply():", maxNumber);
+    </script>
+
+</body>
+</html>
+
+# 3. Write a program for COUNTER. Whenever we click on a "Count" button, value should increment.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 100px;
+        }
+        .counter-box {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        #counter {
+            font-size: 30px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="counter-box">
+        <h1>Counter Program</h1>
+        <p id="counter">0</p>
+        <button onclick="increment()">Count</button>
+    </div>
+
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById("counter").textContent = count;
+        }
+    </script>
+
+</body>
+</html>
+
+# 4. Create a Counter with the help of getter and setter accessors.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Getter & Setter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 100px;
+        }
+        .counter-box {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        #counter {
+            font-size: 30px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .count-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .count-btn:hover {
+            background-color: #218838;
+        }
+        .reset-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .reset-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="counter-box">
+        <h1>Counter with Getter & Setter</h1>
+        <p id="counter">0</p>
+        <button class="count-btn" onclick="increment()">Count</button>
+        <button class="reset-btn" onclick="resetCounter()">Reset</button>
+    </div>
+
+    <script>
+        class Counter {
+            constructor() {
+                this._count = 0; // Private variable
+            }
+            
+            // Getter to retrieve the count
+            get count() {
+                return this._count;
+            }
+
+            // Setter to update the count
+            set count(value) {
+                if (value >= 0) {
+                    this._count = value;
+                } else {
+                    console.error("Count cannot be negative!");
+                }
+            }
+
+            // Method to increment the count
+            increment() {
+                this.count = this._count + 1;
+            }
+
+            // Method to reset the count
+            reset() {
+                this.count = 0;
+            }
+        }
+
+        // Create counter instance
+        const counter = new Counter();
+
+        function increment() {
+            counter.increment();
+            document.getElementById("counter").textContent = counter.count;
+        }
+
+        function resetCounter() {
+            counter.reset();
+            document.getElementById("counter").textContent = counter.count;
+        }
+    </script>
+
+</body>
+</html>
+
+# 5. Add some more properties to an existing function using object prototypes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Prototype Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 100px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Object Prototype Example</h1>
+        <p id="output">Click the button to see details</p>
+        <button onclick="showDetails()">Show Details</button>
+    </div>
+
+    <script>
+        // Constructor Function
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // Adding new properties using Prototype
+        Person.prototype.city = "Hyderabad";
+        Person.prototype.country = "India";
+
+        // Adding methods using Prototype
+        Person.prototype.greet = function() {
+            return `Hello, my name is ${this.name}!`;
+        };
+
+        Person.prototype.getDetails = function() {
+            return `${this.name} is ${this.age} years old and lives in ${this.city}, ${this.country}.`;
+        };
+
+        // Creating an object
+        const person1 = new Person("Priya", 21);
+
+        function showDetails() {
+            document.getElementById("output").textContent = person1.getDetails();
+        }
+    </script>
+
+</body>
+</html>
+
