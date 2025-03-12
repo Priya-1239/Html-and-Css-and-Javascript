@@ -1,0 +1,351 @@
+# 1. Add an event listener to a button. When we click on it it should display current date and time.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #currentDateTime {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="showTimeButton">Click to Show Current Date and Time</button>
+        <p id="currentDateTime"></p>
+    </div>
+
+    <script>
+        document.getElementById('showTimeButton').addEventListener('click', function() {
+            // Create a new Date object
+            const currentDate = new Date();
+
+            // Format the date and time as a readable string
+            const dateTimeString = currentDate.toLocaleString();
+
+            // Display the date and time in the paragraph
+            document.getElementById('currentDateTime').innerText = 'Current Date and Time: ' + dateTimeString;
+        });
+    </script>
+
+</body>
+</html>
+
+# 2. Show the javascript validation. When you click submit, the text box doesn't need to be empty.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Validation Example</h2>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Prevent form submission
+            event.preventDefault();
+
+            // Get the value of the text box
+            const nameInput = document.getElementById('name').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Check if the input is empty
+            if (nameInput.trim() === "") {
+                errorMessage.textContent = "Name field cannot be empty!";
+            } else {
+                // If the input is not empty, submit the form or handle further actions
+                errorMessage.textContent = ""; // Clear any previous error message
+                alert("Form submitted successfully!");
+                // Optionally, you can actually submit the form here, e.g., using AJAX or by removing event.preventDefault()
+                // document.getElementById('myForm').submit();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+# 3. How console.log() can be used for Debugging.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Validation Example</h2>
+        <form id="myForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        // Add event listener to the form's submit event
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Get the value of the text input field
+            const nameInput = document.getElementById('name').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Check if the input is empty
+            if (nameInput.trim() === "") {
+                // Display error message if the input is empty
+                errorMessage.textContent = "Name field cannot be empty!";
+            } else {
+                // If input is valid, clear any error message and show a success alert
+                errorMessage.textContent = "";  // Clear previous error message
+                alert("Form submitted successfully!");
+                // Optionally, you can submit the form here or perform other actions
+                // document.getElementById('myForm').submit();  // Uncomment to submit the form
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+# 4. Write functions to set a cookie, get a cookie and check a cookie in a single program.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Management</title>
+</head>
+<body>
+
+    <h2>Cookie Management Example</h2>
+    <button onclick="setCookie('user', 'JohnDoe', 7)">Set Cookie</button>
+    <button onclick="getCookie('user')">Get Cookie</button>
+    <button onclick="checkCookie('user')">Check Cookie</button>
+    <p id="cookieResult"></p>
+
+    <script>
+        // Function to set a cookie with a specified name, value, and expiration days
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); // Expiration date
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/"; // Set cookie
+            document.getElementById("cookieResult").textContent = "Cookie '" + name + "' is set!";
+        }
+
+        // Function to get a cookie value by name
+        function getCookie(name) {
+            const nameEq = name + "=";
+            const ca = document.cookie.split(';'); // Split cookies by semicolon
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim(); // Remove leading spaces
+                if (c.indexOf(nameEq) === 0) {
+                    document.getElementById("cookieResult").textContent = "Cookie '" + name + "' value: " + c.substring(nameEq.length, c.length);
+                    return c.substring(nameEq.length, c.length); // Return the cookie value
+                }
+            }
+            document.getElementById("cookieResult").textContent = "Cookie '" + name + "' not found!";
+            return ""; // If the cookie is not found
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const cookieValue = getCookie(name); // Use getCookie to check
+            if (cookieValue !== "") {
+                document.getElementById("cookieResult").textContent = "Cookie '" + name + "' exists!";
+            } else {
+                document.getElementById("cookieResult").textContent = "Cookie '" + name + "' does not exist!";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+# 5. Create a JSON object and access it using dot notation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object Example</title>
+</head>
+<body>
+
+    <h2>Accessing JSON Object Using Dot Notation</h2>
+    <p id="jsonResult"></p>
+
+    <script>
+        // Creating a JSON object
+        const person = {
+            name: "John Doe",
+            age: 30,
+            email: "johndoe@example.com",
+            address: {
+                street: "123 Main St",
+                city: "New York",
+                country: "USA"
+            },
+            greet: function() {
+                return "Hello, " + this.name + "!";
+            }
+        };
+
+        // Accessing properties using dot notation
+        const name = person.name; // Accessing 'name'
+        const age = person.age; // Accessing 'age'
+        const email = person.email; // Accessing 'email'
+        const street = person.address.street; // Accessing nested object property 'street'
+        const city = person.address.city; // Accessing nested object property 'city'
+        const greetMessage = person.greet(); // Calling the method 'greet'
+
+        // Displaying the results in the HTML
+        document.getElementById("jsonResult").textContent = 
+            `Name: ${name}, Age: ${age}, Email: ${email}, Street: ${street}, City: ${city}, Greeting: ${greetMessage}`;
+    </script>
+
+</body>
+</html>
