@@ -1,0 +1,371 @@
+# 1. Understand the basics.html which was already created
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jala Technologies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Jala Technologies
+    </header>
+    <section>
+        <h2>About Us</h2>
+        <p>Jala Technologies is a leading company in software development, providing innovative solutions and training programs for professionals worldwide.</p>
+    </section>
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>Software Development</li>
+            <li>IT Training & Coaching</li>
+            <li>AI & Machine Learning Solutions</li>
+            <li>Cloud Computing</li>
+        </ul>
+    </section>
+    <footer>
+        &copy; 2025 Jala Technologies. All rights reserved.
+    </footer>
+</body>
+</html>
+
+# 2. Develop your own web page basics.html with all the following html tags
+Html, head, title, body
+Heading, Paragraph, Italic, Bold, Anchor, Unordered List, List Item, ,label,Blockquote, Horizontal rule, Image, Division, Span
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Basics of HTML
+    </header>
+    <section>
+        <h1>Introduction to HTML</h1>
+        <p><strong>HTML</strong> (HyperText Markup Language) is the standard language for creating web pages.</p>
+    </section>
+    <section>
+        <h2>Text Formatting</h2>
+        <p>This is a <i>italic</i> text, and this is a <b>bold</b> text.</p>
+    </section>
+    <section>
+        <h2>Lists</h2>
+        <ul>
+            <li>HTML Basics</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Programming</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Anchor Tag</h2>
+        <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for more tutorials.</p>
+    </section>
+    <section>
+        <h2>Label & Blockquote</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <blockquote>"Learning HTML is the first step in web development."</blockquote>
+    </section>
+    <section>
+        <h2>Horizontal Rule</h2>
+        <hr>
+    </section>
+    <section>
+        <h2>Image</h2>
+        <img src="https://via.placeholder.com/400" alt="Sample Image">
+    </section>
+    <section>
+        <h2>Div & Span</h2>
+        <div style="background-color:lightgrey; padding:10px;">
+            <span style="color:blue; font-weight:bold;">This is a span inside a div.</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Basics of HTML. All rights reserved.
+    </footer>
+</body>
+</html>
+
+# 3. Navigate within the page to a different section.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Basics of HTML
+        <nav>
+            <a href="#text-formatting">Text Formatting</a> | 
+            <a href="#lists">Lists</a> | 
+            <a href="#anchor-tag">Anchor</a> | 
+            <a href="#image">Image</a>
+        </nav>
+    </header>
+    <section id="introduction">
+        <h1>Introduction to HTML</h1>
+        <p><strong>HTML</strong> (HyperText Markup Language) is the standard language for creating web pages.</p>
+    </section>
+    <section id="text-formatting">
+        <h2>Text Formatting</h2>
+        <p>This is an <i>italic</i> text, and this is a <b>bold</b> text.</p>
+    </section>
+    <section id="lists">
+        <h2>Lists</h2>
+        <ul>
+            <li>HTML Basics</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Programming</li>
+        </ul>
+    </section>
+    <section id="anchor-tag">
+        <h2>Anchor Tag</h2>
+        <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for more tutorials.</p>
+    </section>
+    <section>
+        <h2>Label & Blockquote</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <blockquote>"Learning HTML is the first step in web development."</blockquote>
+    </section>
+    <section>
+        <h2>Horizontal Rule</h2>
+        <hr>
+    </section>
+    <section id="image">
+        <h2>Image</h2>
+        <img src="https://via.placeholder.com/400" alt="Sample Image">
+    </section>
+    <section>
+        <h2>Div & Span</h2>
+        <div style="background-color:lightgrey; padding:10px;">
+            <span style="color:blue; font-weight:bold;">This is a span inside a div.</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Basics of HTML. All rights reserved.
+    </footer>
+</body>
+</html>
+
+# 4. Use pseudo classes and elements into your webpage.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a:hover {
+            color: red;
+        }
+        ul li:first-child {
+            font-weight: bold;
+        }
+        p::first-letter {
+            font-size: 1.5em;
+            color: #0073e6;
+        }
+        input:focus {
+            border: 2px solid #0073e6;
+        }
+        blockquote::before {
+            content: "\201C";
+            font-size: 2em;
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Basics of HTML
+        <nav>
+            <a href="#text-formatting">Text Formatting</a> | 
+            <a href="#lists">Lists</a> | 
+            <a href="#anchor-tag">Anchor</a> | 
+            <a href="#image">Image</a>
+        </nav>
+    </header>
+    <section id="introduction">
+        <h1>Introduction to HTML</h1>
+        <p><strong>HTML</strong> (HyperText Markup Language) is the standard language for creating web pages.</p>
+    </section>
+    <section id="text-formatting">
+        <h2>Text Formatting</h2>
+        <p>This is an <i>italic</i> text, and this is a <b>bold</b> text.</p>
+    </section>
+    <section id="lists">
+        <h2>Lists</h2>
+        <ul>
+            <li>HTML Basics</li>
+            <li>CSS Styling</li>
+            <li>JavaScript Programming</li>
+        </ul>
+    </section>
+    <section id="anchor-tag">
+        <h2>Anchor Tag</h2>
+        <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for more tutorials.</p>
+    </section>
+    <section>
+        <h2>Label & Blockquote</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <blockquote>"Learning HTML is the first step in web development."</blockquote>
+    </section>
+    <section>
+        <h2>Horizontal Rule</h2>
+        <hr>
+    </section>
+    <section id="image">
+        <h2>Image</h2>
+        <img src="https://via.placeholder.com/400" alt="Sample Image">
+    </section>
+    <section>
+        <h2>Div & Span</h2>
+        <div style="background-color:lightgrey; padding:10px;">
+            <span style="color:blue; font-weight:bold;">This is a span inside a div.</span>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Basics of HTML. All rights reserved.
+    </footer>
+</body>
+</html>
