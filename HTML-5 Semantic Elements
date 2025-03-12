@@ -1,0 +1,327 @@
+# 1. Develop a web page with non-semantic elements <div> and <span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Semantic Elements Example</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Styling for div container */
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header inside div */
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Content section */
+        .content {
+            padding: 20px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        /* Styling for span */
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Footer inside div */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Non-Semantic div used as a container -->
+    <div class="container">
+        
+        <!-- Header section inside div -->
+        <div class="header">Welcome to My Web Page</div>
+        
+        <!-- Content section inside div -->
+        <div class="content">
+            <p>This webpage is designed using <span class="highlight">non-semantic elements</span> like div and span.</p>
+            <p>The <span class="highlight">div</span> tag is used to group content, and the <span class="highlight">span</span> tag is used to style inline elements.</p>
+        </div>
+
+        <!-- Footer section inside div -->
+        <div class="footer">&copy; 2025 MyWebsite. All Rights Reserved.</div>
+    </div>
+
+</body>
+</html>
+
+# 2. Develop a web page with the semantic elements <form>, <table> and <article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements Example</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            width: 60%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for Article */
+        article {
+            text-align: left;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #3498db;
+        }
+
+        article h2 {
+            color: #3498db;
+        }
+
+        /* Styling for Form */
+        form {
+            text-align: left;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #2c3e50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #3498db;
+        }
+
+        /* Styling for Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Article Section -->
+        <article>
+            <h2>Understanding Semantic Elements</h2>
+            <p>Semantic elements clearly define the purpose of the content. The `<article>` tag represents independent content, `<form>` is used for user input, and `<table>` is used to present data.</p>
+        </article>
+
+        <!-- Form Section -->
+        <form>
+            <h2>Contact Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message" placeholder="Your message" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Table Section -->
+        <table>
+            <caption><strong>Student Grades</strong></caption>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Priya</td>
+                <td>Math</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Rahul</td>
+                <td>Science</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Sneha</td>
+                <td>English</td>
+                <td>A-</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
+
+# 3. Use all the HTML5 tags and develop a web page article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Web Page Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        figure {
+            text-align: center;
+            margin: 0;
+        }
+        mark {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My HTML5 Web Page</h1>
+    <hgroup>
+        <h2>Your Source for Web Development</h2>
+        <h3>Learning HTML5 Tags</h3>
+    </hgroup>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section>
+    <article>
+        <h2>Understanding HTML5 Tags</h2>
+        <p>HTML5 introduces several new tags that help organize content semantically and improve accessibility. <mark>Semantic HTML</mark> improves search engine optimization (SEO) and ensures that content is properly structured.</p>
+        <time datetime="2025-03-08">March 8, 2025</time>
+    </article>
+    
+    <article>
+        <h2>Why Use Semantic HTML?</h2>
+        <p>Semantic HTML is important because it helps browsers and search engines understand the structure of content. By using tags like <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code>, the content becomes easier to parse.</p>
+        <time datetime="2025-03-09">March 9, 2025</time>
+    </article>
+    
+    <aside>
+        <h3>Tip of the Day</h3>
+        <p>Remember to use <mark>semantic tags</mark> to make your content more accessible and SEO-friendly!</p>
+    </aside>
+</section>
+
+<figure>
+    <img src="https://via.placeholder.com/300" alt="Web Development" />
+    <figcaption>Image showing web development tools</figcaption>
+</figure>
+
+<footer>
+    <p>Created with ❤️ by Priya</p>
+</footer>
+
+</body>
+</html>
