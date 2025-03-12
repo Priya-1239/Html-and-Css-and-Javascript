@@ -1,0 +1,235 @@
+# 1. Write a program which consist of single line and multiline comments.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Comments</title>
+</head>
+<body>
+    <h1>Check the console for JavaScript output</h1>
+    
+    <script>
+        // This is a single-line comment in JavaScript
+
+        /* 
+           This is a multi-line comment in JavaScript.
+           It can span multiple lines.
+        */
+
+        // Example function demonstrating comments
+        function greet() {
+            console.log("Hello, welcome to JavaScript!"); // This prints a greeting message
+        }
+
+        greet();
+    </script>
+</body>
+</html>
+
+# 2. Create an array consisting of fruits names and when we click on a button sort it in descending order.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Fruits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #fruit-list {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit List</h1>
+    <ul id="fruit-list"></ul>
+    <button onclick="sortFruits()">Sort in Descending Order</button>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Mango", "Orange", "Pineapple", "Grapes"];
+
+        function displayFruits() {
+            const list = document.getElementById("fruit-list");
+            list.innerHTML = "";
+            fruits.forEach(fruit => {
+                let li = document.createElement("li");
+                li.textContent = fruit;
+                list.appendChild(li);
+            });
+        }
+
+        function sortFruits() {
+            fruits.sort().reverse(); // Sort in descending order
+            displayFruits();
+        }
+
+        // Display initial list
+        displayFruits();
+    </script>
+</body>
+</html>
+
+# 3. Write a program with FOR/IN loop.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/In Loop Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit Colors</h1>
+    <ul id="fruit-list"></ul>
+
+    <script>
+        // Object containing fruit names and their colors
+        let fruits = {
+            Apple: "Red",
+            Banana: "Yellow",
+            Cherry: "Red",
+            Mango: "Orange",
+            Orange: "Orange"
+        };
+
+        // Get the list element
+        let list = document.getElementById("fruit-list");
+        
+        // Using for...in loop to iterate over object properties
+        for (let fruit in fruits) {
+            let li = document.createElement("li");
+            li.textContent = `${fruit} is ${fruits[fruit]}.`;
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>
+
+# 4. Create an object "person" with properties firstname and lastname. Display these properties using 2 different ways of accessing.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Object</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #output {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Person Object</h1>
+    <div id="output"></div>
+
+    <script>
+        // Creating an object "person" with properties
+        let person = {
+            firstname: "John",
+            lastname: "Doe"
+        };
+
+        // Accessing properties in two different ways
+        let outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `First Name: ${person.firstname} <br> Last Name: ${person["lastname"]}`;
+    </script>
+</body>
+</html>
+
+
+# 5. Write a program with variable hoisting(initialization first then declaration).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Hoisting Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Variable Hoisting</h1>
+    <p>Check the console to see how variable hoisting works.</p>
+
+    <script>
+        console.log(myVar); // Undefined due to hoisting
+
+        myVar = "Hello, Variable Hoisting!";
+        console.log(myVar); // Prints the assigned value
+
+        var myVar; // Declaration happens after initialization, but it is hoisted
+    </script>
+</body>
+</html>
+
+# 6. Use strict mode in your program and understand why variable not declared causes error.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Strict Mode</h1>
+    <p>Check the console to see the error caused by an undeclared variable.</p>
+
+    <script>
+        "use strict";
+
+        // Attempting to use an undeclared variable (this will cause an error)
+        myVar = "This will cause an error in strict mode";
+        console.log(myVar);
+    </script>
+</body>
+</html>
